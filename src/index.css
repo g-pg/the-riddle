@@ -41,13 +41,13 @@ img {
 
 @keyframes biggerJigSaw {
 	0% {
-		background-size: 150%;
-		background-position: bottom -700px right 50%;
+		background-size: 120%;
+		background-position: bottom 70% right 50%;
 	}
 
 	100% {
-		background-size: 150%;
-		background-position: bottom -700px right 50%;
+		background-size: 120%;
+		background-position: bottom 70% right 50%;
 	}
 }
 .welcome-page--wrapper {
@@ -255,12 +255,12 @@ img {
 	@keyframes biggerJigSaw {
 		0% {
 			background-size: 170%;
-			background-position: bottom;
+			background-position: bottom 80% right 50%;
 		}
 
 		100% {
 			background-size: 170%;
-			background-position: bottom;
+			background-position: bottom 80% right 50%;
 		}
 	}
 }
