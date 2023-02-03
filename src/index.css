@@ -29,13 +29,12 @@ img {
 }
 
 .welcome-page-animation {
-	animation: invertColors 0.1s infinite, biggerJigSaw 2s;
+	animation: invertColors 0.2s, biggerJigSaw 2s;
 }
 
 @keyframes invertColors {
 	0% {
 		filter: invert();
-		/* background-repeat: repeat; */
 	}
 }
 
