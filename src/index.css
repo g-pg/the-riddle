@@ -254,12 +254,12 @@ img {
 	@keyframes biggerJigSaw {
 		0% {
 			background-size: 200%;
-			background-position: bottom 180% right 50%;
+			background-position: bottom 140% right 50%;
 		}
 
 		100% {
 			background-size: 200%;
-			background-position: bottom 180% right 50%;
+			background-position: bottom 140% right 50%;
 		}
 	}
 }
