@@ -60,6 +60,7 @@ export default function App() {
 					answer={riddlesData.riddles[riddleLevel].answer}
 					level={riddleLevel + 1}
 					rightAnswer={handleRightAnswer}
+					resetGame={() => setGameStarted(false)}
 				/>
 			)}
 

@@ -29,7 +29,9 @@ export default function Riddles(props) {
 		let trueAnswer = props.answer.toLowerCase();
 		let lettersCorrect = 0;
 		for (let i = 0; i < trueAnswer.length; i++) {
-			answerGiven[i] === trueAnswer[i] ? lettersCorrect++ : "";
+			answerGiven.split(" ").join("")[i] === trueAnswer.split(" ").join("")[i]
+				? lettersCorrect++
+				: "";
 		}
 
 		event.preventDefault();
@@ -39,7 +41,7 @@ export default function Riddles(props) {
 			setTipActive(false);
 
 			props.rightAnswer();
-		} else if (lettersCorrect >= 0.7 * trueAnswer.length) {
+		} else if (lettersCorrect >= 0.6 * trueAnswer.length) {
 			setCloseAnswer(true);
 			setTimeout(() => {
 				setCloseAnswer(false);
@@ -58,7 +60,7 @@ export default function Riddles(props) {
 		<section className="riddle-main">
 			<header className="riddle-header">
 				<div className="riddle-header-wrapper container">
-					<h1>The Deficience Riddle</h1>
+					<h1 onClick={props.resetGame}>The Deficience Riddle</h1>
 					<h2>{props.level}</h2>
 				</div>
 			</header>

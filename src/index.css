@@ -120,6 +120,8 @@ img {
 
 .riddle-header h1 {
 	color: black;
+	font-size: 1.2rem;
+	cursor: pointer;
 }
 
 .riddle-header h2 {
@@ -168,7 +170,7 @@ img {
 	border: none;
 	bottom: 10px;
 	right: 10px;
-	opacity: 60%;
+	opacity: 50%;
 	cursor: pointer;
 }
 
