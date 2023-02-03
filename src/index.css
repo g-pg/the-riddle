@@ -29,7 +29,7 @@ img {
 }
 
 .welcome-page-animation {
-	animation: invertColors 0.2s, biggerJigSaw 2s;
+	animation: invertColors 0.2s, biggerJigSaw 5s;
 }
 
 @keyframes invertColors {
