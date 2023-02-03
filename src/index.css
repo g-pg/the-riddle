@@ -29,16 +29,27 @@ img {
 }
 
 .welcome-page-animation {
-	animation: invertColors 0.1s infinite;
+	animation: invertColors 0.1s infinite, biggerJigSaw 2s;
 }
 
 @keyframes invertColors {
 	0% {
 		filter: invert();
-		background-repeat: repeat;
+		/* background-repeat: repeat; */
 	}
 }
 
+@keyframes biggerJigSaw {
+	0% {
+		background-size: 100%;
+		background-position: bottom -700px right 50%;
+	}
+
+	100% {
+		background-size: 100%;
+		background-position: bottom 0 right 50%;
+	}
+}
 .welcome-page--wrapper {
 	display: flex;
 	flex-direction: column;
@@ -237,5 +248,19 @@ img {
 
 	100% {
 		opacity: 0;
+	}
+}
+
+@media (max-width: 500px) {
+	@keyframes biggerJigSaw {
+		0% {
+			background-size: 170%;
+			background-position: bottom;
+		}
+
+		100% {
+			background-size: 170%;
+			background-position: bottom;
+		}
 	}
 }
