@@ -25,7 +25,7 @@ export default function Riddles(props) {
 	}
 
 	function handleSubmitAnswer(event) {
-		let answerGiven = answer.answerContent.toLowerCase();
+		let answerGiven = answer.answerContent.toLowerCase().trim();
 		let trueAnswer = props.answer.toLowerCase();
 		let lettersCorrect = 0;
 		for (let i = 0; i < trueAnswer.length; i++) {
