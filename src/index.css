@@ -21,7 +21,7 @@ img {
 .welcome-page {
 	height: 100vh;
 	background-color: #060606;
-	background-image: url("./assets/img/jigsaw-bg.jpg");
+	background-image: url("public/jigsaw-bg.jpg");
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-size: contain;
@@ -160,7 +160,7 @@ img {
 
 .riddle--tip-btn {
 	position: absolute;
-	background: url("assets/img/lightbulb.svg");
+	background: url("public/lightbulb.svg");
 	background-size: contain;
 	width: 30px;
 	aspect-ratio: 1;
