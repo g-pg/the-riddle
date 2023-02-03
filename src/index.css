@@ -253,13 +253,13 @@ img {
 @media (max-width: 500px) {
 	@keyframes biggerJigSaw {
 		0% {
-			background-size: 170%;
-			background-position: bottom 80% right 50%;
+			background-size: 200%;
+			background-position: bottom 0 right 50%;
 		}
 
 		100% {
-			background-size: 170%;
-			background-position: bottom 80% right 50%;
+			background-size: 200%;
+			background-position: bottom 0 right 50%;
 		}
 	}
 }
