@@ -262,7 +262,7 @@ img {
 
 @media (max-width: 500px) {
 	.welcome-page {
-		background-position: bottom center;
+		background-position: bottom 30% center;
 		background-size: 150%;
 	}
 
