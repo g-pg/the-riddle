@@ -58,7 +58,7 @@ export default function Riddles(props) {
 		<section className="riddle-main">
 			<header className="riddle-header">
 				<div className="riddle-header-wrapper container">
-					<h1 onClick={props.resetGame}>The Deficience Riddle</h1>
+					<h1 onClick={props.resetGame}>Enigma</h1>
 					<h2>{props.level}</h2>
 				</div>
 			</header>
@@ -67,7 +67,9 @@ export default function Riddles(props) {
 				<h2 className="dica">{props.tip}</h2>
 				<div className="riddle--img-wrapper">
 					<img src={props.img} className="riddle-img" />
-					<button className="riddle--tip-btn" onClick={toggleTip}></button>
+					{props.tip2 && (
+						<button className="riddle--tip-btn" onClick={toggleTip}></button>
+					)}
 					{tipActive && (
 						<p className="extra-tip">
 							{props.tip2 ? props.tip2 : `Sem mais dicas, seu vagabundo.`}
@@ -82,7 +84,7 @@ export default function Riddles(props) {
 						onChange={handleChange}
 						value={answer.answerContent}
 					/>
-					<button className="riddle--form--btn">Tentar a sorte</button>
+					<button className="riddle--form--btn">Enviar</button>
 				</form>
 				{wrongAnswer && <h3 className="wrong-answer">ERRADO</h3>}
 				{closeAnswer && <h3 className="wrong-answer">QUASE</h3>}

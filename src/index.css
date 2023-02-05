@@ -8,6 +8,8 @@
 
 body {
 	font-family: "Inter", sans-serif;
+	min-height: 100vh;
+	background-color: #000000;
 }
 img {
 	max-width: 100%;
@@ -19,17 +21,19 @@ img {
 }
 
 .welcome-page {
-	height: 100vh;
-	background-color: #060606;
-	background-image: url("/jigsaw-bg.jpg");
+	min-height: 100vh;
+	background-color: #000000;
+	background-image: url("/mask.jpg");
 	background-repeat: no-repeat;
-	background-position: bottom right;
-	background-size: contain;
+	background-position: bottom;
+	background-size: 50%;
 	padding: 1rem;
+	display: flex;
+	justify-content: center;
 }
 
 .welcome-page-animation {
-	animation: invertColors 0.2s, biggerJigSaw 5s;
+	animation: invertColors 0.3s, biggerCharacter 5s;
 }
 
 @keyframes invertColors {
@@ -38,21 +42,18 @@ img {
 	}
 }
 
-@keyframes biggerJigSaw {
+@keyframes biggerCharacter {
 	0% {
-		background-size: 120%;
-		background-position: bottom 70% right 50%;
+		background-size: 80%;
+		background-position: center;
 	}
 
 	100% {
 		background-size: 120%;
-		background-position: bottom 70% right 50%;
+		background-position: center;
 	}
 }
 .welcome-page--wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .welcome--text {
@@ -71,14 +72,13 @@ img {
 
 .welcome--text h2 {
 	font-size: clamp(1.5rem, 0.5vw, 3rem);
-	margin-left: 5px;
 }
 
 .welcome--start-btn-wrapper {
 	display: flex;
 	flex-direction: column;
-	margin-top: 10%;
-	align-items: flex-start;
+	margin-top: 15%;
+	align-items: center;
 	gap: 1rem;
 }
 
@@ -88,7 +88,7 @@ img {
 	font-family: inherit;
 	color: white;
 	font-weight: 800;
-	font-size: clamp(2rem, 3vw, 5rem);
+	font-size: clamp(1.8rem, 2vw, 2rem);
 	cursor: pointer;
 }
 
@@ -102,7 +102,7 @@ img {
 
 .riddle-main {
 	background: #0f0f0f;
-	height: 100vh;
+	min-height: 100vh;
 	animation: fadeIn 5s ease-in-out;
 }
 
@@ -156,13 +156,15 @@ img {
 .dica {
 	margin-block: 1rem;
 	color: white;
-	font-size: 1.4rem;
+	font-size: 1.1rem;
 	text-align: center;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 .riddle-img {
-	width: 700px;
+	width: 100%;
+	max-width: 700px;
+	max-height: 500px;
 	border-radius: 10px;
 }
 
@@ -250,16 +252,29 @@ img {
 	}
 }
 
+.credits {
+	color: rgb(155, 155, 155);
+	font-size: 8px;
+	text-align: right;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
 @media (max-width: 500px) {
-	@keyframes biggerJigSaw {
+	.welcome-page {
+		background-position: bottom center;
+		background-size: 150%;
+	}
+
+	@keyframes biggerCharacter {
 		0% {
 			background-size: 200%;
-			background-position: bottom 140% right 50%;
+			background-position: center;
 		}
 
 		100% {
-			background-size: 200%;
-			background-position: bottom 140% right 50%;
+			background-size: 250%;
+			background-position: center;
 		}
 	}
 }

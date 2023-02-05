@@ -13,30 +13,38 @@ export default function WelcomePage(props) {
 	}
 
 	return (
-		<section className={`welcome-page ${welcomeAnimation ? "welcome-page-animation" : ""}`}>
-			{!welcomeAnimation && (
-				<div className="container">
-					<div className="welcome-page--wrapper">
-						<div className="welcome--text">
-							<h1>Olá, Bruno...</h1>
-							<h2>Eu quero jogar um jogo.</h2>
-						</div>
-						<div className="welcome--start-btn-wrapper">
-							<button
-								className="welcome--start-btn"
-								onClick={() => startGame("newGame")}
-							>
-								Novo jogo
-							</button>
-							{localStorage.getItem("riddleLevel") > 1 && (
-								<button className="welcome--start-btn" onClick={startGame}>
-									Continuar
+		<>
+			<section
+				className={`welcome-page ${welcomeAnimation ? "welcome-page-animation" : ""}`}
+			>
+				{!welcomeAnimation && (
+					<div className="container">
+						<div className="welcome-page--wrapper">
+							<div className="welcome--text">
+								<h1>Enigma</h1>
+								<h2></h2>
+							</div>
+							<div className="welcome--start-btn-wrapper">
+								<button
+									className="welcome--start-btn"
+									onClick={() => startGame("newGame")}
+								>
+									Novo jogo
 								</button>
-							)}
+								{localStorage.getItem("riddleLevel") > 1 && (
+									<button
+										className="welcome--start-btn"
+										onClick={startGame}
+									>
+										Continuar
+									</button>
+								)}
+							</div>
 						</div>
 					</div>
-				</div>
-			)}
-		</section>
+				)}
+			</section>
+			<p className="credits">Por Gabriel Gusso</p>
+		</>
 	);
 }

@@ -4,8 +4,7 @@ export default function GameWon(props) {
 	return (
 		<section className="welcome-page">
 			<div className="welcome--text">
-				<h1>Você venceu meu desafio.</h1>
-				<h2>Até a próxima...</h2>
+				<h1>Você desvendou o enigma.</h1>
 			</div>
 		</section>
 	);
