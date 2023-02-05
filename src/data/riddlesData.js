@@ -2,13 +2,6 @@ export default {
 	riddles: [
 		{},
 		{
-			name: "Nemo",
-			img: "/nemo.jpg",
-			tip: "48 52 6, 123 23 6",
-			tip2: "",
-			answer: "nemo",
-		},
-		{
 			name: "Sócrates",
 			img: "/socrates.jpg",
 			tip: "Críton, devemos um galo a Asclépio. Faz a oferenda e não a omitas.",
@@ -16,11 +9,11 @@ export default {
 			answer: "cicuta",
 		},
 		{
-			name: "2319",
-			img: "/2319.jpg",
-			tip: "",
+			name: "Nemo",
+			img: "/nemo.jpg",
+			tip: "48 52 6, 123 23 6",
 			tip2: "",
-			answer: "2319",
+			answer: "nemo",
 		},
 		{
 			name: "Cifra de César",
@@ -30,10 +23,18 @@ export default {
 			answer: "decifrar",
 		},
 		{
-			name: "Ash",
-			img: "/cinzas.jpg",
-			tip: "Ele pegou todos.",
-			answer: "ash ketchum",
+			name: "Ouroboros",
+			img: "/circle.png",
+			tip: "🐍",
+			tip2: "",
+			answer: "ouroboros",
+		},
+		{
+			name: "2319",
+			img: "/2319.jpg",
+			tip: "",
+			tip2: "",
+			answer: "2319",
 		},
 		{
 			name: "ganso",
@@ -42,18 +43,17 @@ export default {
 			answer: "ganso",
 		},
 		{
+			name: "Ash",
+			img: "/cinzas.jpg",
+			tip: "Ele pegou todos.",
+			answer: "ash ketchum",
+		},
+		{
 			name: "Xadrez",
 			img: "/chess.jpg",
 			tip: "Brancas jogam.",
 			tip2: "",
 			answer: "h7",
-		},
-		{
-			name: "Ouroboros",
-			img: "/circle.png",
-			tip: "🐍",
-			tip2: "",
-			answer: "ouroboros",
 		},
 	],
 };
