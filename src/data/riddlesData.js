@@ -1,5 +1,6 @@
 export default {
 	riddles: [
+		{},
 		{
 			name: "Bispo",
 			img: "/bispo.jpg",

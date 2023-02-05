@@ -54,8 +54,6 @@ export default function Riddles(props) {
 		}
 	}
 
-	function handleSubmit() {}
-
 	return (
 		<section className="riddle-main">
 			<header className="riddle-header">
@@ -76,7 +74,7 @@ export default function Riddles(props) {
 						</p>
 					)}
 				</div>
-				<form onSubmit={handleSubmit} className="riddle--form centralizar">
+				<form onSubmit={handleSubmitAnswer} className="riddle--form centralizar">
 					<input
 						type="text"
 						className="input-answer"
@@ -84,9 +82,7 @@ export default function Riddles(props) {
 						onChange={handleChange}
 						value={answer.answerContent}
 					/>
-					<button className="riddle--form--btn" onClick={handleSubmitAnswer}>
-						Tentar a sorte
-					</button>
+					<button className="riddle--form--btn">Tentar a sorte</button>
 				</form>
 				{wrongAnswer && <h3 className="wrong-answer">ERRADO</h3>}
 				{closeAnswer && <h3 className="wrong-answer">QUASE</h3>}

@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 
 export default function WelcomePage(props) {
-	const [gameStarted, setGameStarted] = useState(false);
+	const [welcomeAnimation, setWelcomeAnimation] = useState(false);
 
 	function startGame(action) {
 		const startAudio = new Audio("/thunder_bell.wav");
 		startAudio.play();
-
-		props.gameProgress(action);
-		setGameStarted(true);
-
+		setWelcomeAnimation(true);
 		setTimeout(() => {
-			props.startGame();
+			props.startGame(action);
 		}, 2000);
 	}
 
 	return (
-		<section className={`welcome-page ${gameStarted ? "welcome-page-animation" : ""}`}>
-			{!gameStarted && (
+		<section className={`welcome-page ${welcomeAnimation ? "welcome-page-animation" : ""}`}>
+			{!welcomeAnimation && (
 				<div className="container">
 					<div className="welcome-page--wrapper">
 						<div className="welcome--text">
@@ -27,11 +24,11 @@ export default function WelcomePage(props) {
 						<div className="welcome--start-btn-wrapper">
 							<button
 								className="welcome--start-btn"
-								onClick={() => startGame("newgame")}
+								onClick={() => startGame("newGame")}
 							>
 								Novo jogo
 							</button>
-							{localStorage.getItem("riddleLevel") && (
+							{localStorage.getItem("riddleLevel") > 1 && (
 								<button className="welcome--start-btn" onClick={startGame}>
 									Continuar
 								</button>

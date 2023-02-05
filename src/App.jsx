@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Riddles from "./components/Riddles";
 import WelcomePage from "./components/WelcomePage";
 import riddlesData from "./data/riddlesData";
@@ -8,13 +8,17 @@ export default function App() {
 	const riddles = riddlesData.riddles;
 	const [gameStarted, setGameStarted] = useState(false);
 	const [riddleLevel, setRiddleLevel] = useState(
-		JSON.parse(localStorage.getItem("riddleLevel")) || 0
+		JSON.parse(localStorage.getItem("riddleLevel")) || 1
 	);
 
 	const [gameWon, setGameWon] = useState(false);
 
-	function startGame() {
+	function startGame(action) {
 		setGameStarted(true);
+
+		if (action === "newGame") {
+			setRiddleLevel(1);
+		}
 	}
 
 	function handleRightAnswer() {
@@ -22,34 +26,18 @@ export default function App() {
 			setRiddleLevel((prevRiddleLevel) => {
 				return prevRiddleLevel + 1;
 			});
-			trackProgress("save");
 		} else {
 			setGameWon(true);
 		}
 	}
 
-	function trackProgress(action) {
-		if (action === "save") {
-			localStorage.getItem("riddleLevel")
-				? localStorage.setItem("riddleLevel", riddleLevel + 1)
-				: localStorage.setItem("riddleLevel", 1);
-		} else if (action === "newgame") {
-			localStorage.removeItem("riddleLevel");
-			setRiddleLevel(0);
-		} else {
-			return;
-		}
-	}
+	useEffect(() => {
+		localStorage.setItem("riddleLevel", riddleLevel);
+	}, [riddleLevel]);
 
 	return (
 		<>
-			{!gameStarted && (
-				<WelcomePage
-					gameStarted={gameStarted}
-					startGame={startGame}
-					gameProgress={trackProgress}
-				/>
-			)}
+			{!gameStarted && <WelcomePage gameStarted={gameStarted} startGame={startGame} />}
 
 			{gameStarted && !gameWon && (
 				<Riddles
@@ -58,7 +46,7 @@ export default function App() {
 					tip={riddlesData.riddles[riddleLevel].tip}
 					tip2={riddlesData.riddles[riddleLevel].tip2}
 					answer={riddlesData.riddles[riddleLevel].answer}
-					level={riddleLevel + 1}
+					level={riddleLevel}
 					rightAnswer={handleRightAnswer}
 					resetGame={() => setGameStarted(false)}
 				/>
