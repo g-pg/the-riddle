@@ -16,18 +16,18 @@ export default {
 			answer: "nemo",
 		},
 		{
+			name: "Ouroboros",
+			img: "/circle.png",
+			tip: "Gn 3:14,15",
+			tip2: "",
+			answer: "ouroboros",
+		},
+		{
 			name: "Cifra de César",
 			img: "/moeda-cesar.jpg",
 			tip: "ghfliudu",
 			tip2: "Conheceis o método? A chave está por aqui.",
 			answer: "decifrar",
-		},
-		{
-			name: "Ouroboros",
-			img: "/circle.png",
-			tip: "🐍",
-			tip2: "",
-			answer: "ouroboros",
 		},
 		{
 			name: "2319",
