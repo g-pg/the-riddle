@@ -24,9 +24,9 @@ export default {
 		},
 		{
 			name: "Cifra de César",
-			img: "/moeda-cesar.jpg",
+			img: "/emperor.webp",
 			tip: "higmjvev",
-			tip2: "Conheceis o método? A chave está por aqui.",
+			tip2: "Conheceis o método? A chave está à vista.",
 			answer: "decifrar",
 		},
 		{
