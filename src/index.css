@@ -7,10 +7,16 @@
 }
 
 body {
-	font-family: "Inter", sans-serif;
 	min-height: 100vh;
 	background-color: #000000;
+	font-family: "Source Code Pro", monospace;
 }
+
+button,
+input {
+	font-family: inherit;
+}
+
 img {
 	max-width: 100%;
 }
@@ -20,7 +26,8 @@ img {
 	margin: 0 auto;
 }
 
-.welcome-page {
+.welcome-page,
+.gamewon-page {
 	min-height: 100vh;
 	background-color: #000000;
 	background-image: url("/mask.jpg");
@@ -100,6 +107,8 @@ img {
 	transform: scale(98%);
 }
 
+.gamewon-text {
+}
 .riddle-main {
 	background: #0f0f0f;
 	min-height: 100vh;
@@ -261,7 +270,8 @@ img {
 }
 
 @media (max-width: 500px) {
-	.welcome-page {
+	.welcome-page,
+	.gamewon-page {
 		background-position: bottom 30% center;
 		background-size: 150%;
 	}

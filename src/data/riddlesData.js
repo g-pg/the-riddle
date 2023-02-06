@@ -3,14 +3,14 @@ export default {
 		{},
 		{
 			name: "Sócrates",
-			img: "/socrates.jpg",
-			tip: "Críton, devemos um galo a Asclépio. Faz a oferenda e não a omitas.",
+			img: "/pintura.jpg",
+			tip: "Críton, devemos um galo a Asclépio.",
 			tip2: "",
 			answer: "cicuta",
 		},
 		{
 			name: "Nemo",
-			img: "/nemo.jpg",
+			img: "/aquario.jpg",
 			tip: "48 52 6, 123 23 6",
 			tip2: "",
 			answer: "nemo",
@@ -25,13 +25,13 @@ export default {
 		{
 			name: "Cifra de César",
 			img: "/moeda-cesar.jpg",
-			tip: "ghfliudu",
+			tip: "higmjvev",
 			tip2: "Conheceis o método? A chave está por aqui.",
 			answer: "decifrar",
 		},
 		{
 			name: "2319",
-			img: "/2319.jpg",
+			img: "/monstros.jpg",
 			tip: "",
 			tip2: "",
 			answer: "2319",
