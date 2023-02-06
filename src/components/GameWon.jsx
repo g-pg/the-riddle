@@ -5,6 +5,7 @@ export default function GameWon(props) {
 		<section className="gamewon-page">
 			<div className="gamewon--text">
 				<h1>Você desvendou o enigma.</h1>
+				<p>Por enquanto...</p>
 			</div>
 		</section>
 	);
