@@ -74,7 +74,7 @@ img {
 
 .welcome--text h1 {
 	font-size: clamp(3rem, 4vw, 5rem);
-	margin-bottom: 20px;
+	margin-bottom: 60px;
 }
 
 .welcome--text h2 {
@@ -97,6 +97,8 @@ img {
 	font-weight: 800;
 	font-size: clamp(1.8rem, 2vw, 2rem);
 	cursor: pointer;
+
+	width: 200px;
 }
 
 .welcome--start-btn:hover {
@@ -117,6 +119,7 @@ img {
 .gamewon--text p {
 	color: crimson;
 	text-align: center;
+	font-size: 2rem;
 }
 
 .riddle-main {

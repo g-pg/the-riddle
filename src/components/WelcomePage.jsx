@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Typewriter from "typewriter-effect";
 
 export default function WelcomePage(props) {
 	const [welcomeAnimation, setWelcomeAnimation] = useState(false);
@@ -21,7 +22,16 @@ export default function WelcomePage(props) {
 					<div className="container">
 						<div className="welcome-page--wrapper">
 							<div className="welcome--text">
-								<h1>Enigma</h1>
+								<h1>
+									<Typewriter
+										onInit={(typewriter) => {
+											typewriter
+												.start()
+												.changeDelay(150)
+												.typeString("Enigma");
+										}}
+									/>
+								</h1>
 								<h2></h2>
 							</div>
 							<div className="welcome--start-btn-wrapper">
