@@ -32,8 +32,8 @@ img {
 	background-color: #000000;
 	background-image: url("/mask.jpg");
 	background-repeat: no-repeat;
-	background-position: bottom;
-	background-size: 50%;
+	background-position: bottom 20% center;
+	background-size: 700px;
 	padding: 1rem;
 	display: flex;
 	justify-content: center;
@@ -282,11 +282,11 @@ img {
 	margin-right: 10px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.welcome-page,
 	.gamewon-page {
 		background-position: bottom 30% center;
-		background-size: 150%;
+		background-size: 600px;
 	}
 
 	@keyframes biggerCharacter {
